@@ -15,16 +15,6 @@
       >
         THE DAILY KAZOO
       </h1>
-
-      <!-- <label for="eventAmt">Events to Show</label>
-      <input
-        type="range"
-        id="eventAmt"
-        min="1"
-        max="20"
-        value="9"
-        class="accent-blue-600 cursor-grab"
-      /> -->
     </header>
 
     <main class="max-w-6xl w-full mx-auto">
@@ -36,22 +26,23 @@
           class="bg-white dark:bg-slate-800 shadow-xl shadow-slate-200 dark:shadow-slate-800 rounded-lg"
         >
           <div
-            class="p-3 shadow bg-indigo-500 text-indigo-50 uppercase grid place-items-center rounded-t-lg"
+            class="p-3 shadow bg-${generateColor()}-500 text-indigo-50 uppercase grid place-items-center rounded-t-lg"
           >
-            <p class="text-sm">FEB</p>
-            <p class="text-3xl font-bold">3</p>
+            <p class="text-sm"></p>
+            <p class="text-3xl font-bold"></p>
           </div>
           <div class="p-4 md:p-6 lg:p-8 grid gap-4 md:gap-6">
             <div class="grid gap-1">
-              <p class="text-slate-400 text-sm">Feb 13-Feb 16</p>
+              <p class="text-slate-400 text-sm"></p>
               <h2 class="font-bold text-2xl">
-                <a href="#">Adopt More Cats</a>
+                <a href=""></a>
+                <p class="text-slate-400 text-sm"></p>
               </h2>
               <div class="grid gap-1">
                 <button
                   aria-expanded="false"
-                  aria-controls="details-1"
-                  id="btn-1"
+                  aria-controls="details-${idx}"
+                  id="btn-${idx}"
                   class="text-slate-400 flex gap-1 items-center cursor-pointer"
                 >
                   <p class="pointer-events-none">See Details</p>
@@ -70,198 +61,20 @@
                     />
                   </svg>
                 </button>
-                <div class="grid gap-1" aria-labelledby="btn-1" id="details-1">
-                  <p class="text-slate-400">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Accusantium beatae eveniet, pariatur dicta laboriosam nobis
-                    hic ipsa et dignissimos corrupti, omnis ex ad mollitia minus
-                    voluptatem quo impedit commodi molestiae. Ullam aliquam
-                    repellat, commodi eius magnam mollitia quos dolor expedita
-                    possimus consequatur quam quisquam? Corrupti atque autem
-                    omnis mollitia eos.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <a
-              href="#"
-              class="bg-indigo-500 rounded-md px-4 py-2 text-indigo-50 shadow-2xl shadow-indigo-200 dark:shadow-none text-center font-bold hover:shadow-none ring ring-offset-0 ring-indigo-500 focus:outline-none focus:ring-offset-2 transition-all"
-              >View Event</a
-            >
-          </div>
-        </article>
-
-        <article
-          class="bg-white dark:bg-slate-800 shadow-xl shadow-slate-200 dark:shadow-slate-800 rounded-lg"
-        >
-          <div
-            class="p-3 shadow bg-indigo-500 text-indigo-50 uppercase grid place-items-center rounded-t-lg"
-          >
-            <p class="text-sm">FEB</p>
-            <p class="text-3xl font-bold">3</p>
-          </div>
-          <div class="p-4 md:p-6 lg:p-8 grid gap-4 md:gap-6">
-            <div class="grid gap-1">
-              <p class="text-slate-400 text-sm">Feb 13-Feb 16</p>
-              <h2 class="font-bold text-2xl">
-                <a href="#">Adopt More Cats</a>
-              </h2>
-              <div class="grid gap-1">
-                <button
-                  aria-expanded="false"
-                  aria-controls="details-1"
-                  id="btn-1"
-                  class="text-slate-400 flex gap-1 items-center cursor-pointer"
+                <div
+                  class="grid gap-1 hidden"
+                  aria-labelledby="btn-${idx}"
+                  id="details-${idx}"
                 >
-                  <p class="pointer-events-none">See Details</p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="h-4 w-4 pointer-events-none transition-transform"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                    />
-                  </svg>
-                </button>
-                <div class="grid gap-1" aria-labelledby="btn-1" id="details-1">
                   <p class="text-slate-400">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Accusantium beatae eveniet, pariatur dicta laboriosam nobis
-                    hic ipsa et dignissimos corrupti, omnis ex ad mollitia minus
-                    voluptatem quo impedit commodi molestiae. Ullam aliquam
-                    repellat, commodi eius magnam mollitia quos dolor expedita
-                    possimus consequatur quam quisquam? Corrupti atque autem
-                    omnis mollitia eos.
+                    ${event.description ?? "No notes..."}
                   </p>
                 </div>
               </div>
             </div>
             <a
-              href="#"
-              class="bg-indigo-500 rounded-md px-4 py-2 text-indigo-50 shadow-2xl shadow-indigo-200 dark:shadow-none text-center font-bold hover:shadow-none ring ring-offset-0 ring-indigo-500 focus:outline-none focus:ring-offset-2 transition-all"
-              >View Event</a
-            >
-          </div>
-        </article>
-
-        <article
-          class="bg-white dark:bg-slate-800 shadow-xl shadow-slate-200 dark:shadow-slate-800 rounded-lg"
-        >
-          <div
-            class="p-3 shadow bg-indigo-500 text-indigo-50 uppercase grid place-items-center rounded-t-lg"
-          >
-            <p class="text-sm">FEB</p>
-            <p class="text-3xl font-bold">3</p>
-          </div>
-          <div class="p-4 md:p-6 lg:p-8 grid gap-4 md:gap-6">
-            <div class="grid gap-1">
-              <p class="text-slate-400 text-sm">Feb 13-Feb 16</p>
-              <h2 class="font-bold text-2xl">
-                <a href="#">Adopt More Cats</a>
-              </h2>
-              <div class="grid gap-1">
-                <button
-                  aria-expanded="false"
-                  aria-controls="details-1"
-                  id="btn-1"
-                  class="text-slate-400 flex gap-1 items-center cursor-pointer"
-                >
-                  <p class="pointer-events-none">See Details</p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="h-4 w-4 pointer-events-none transition-transform"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                    />
-                  </svg>
-                </button>
-                <div class="grid gap-1" aria-labelledby="btn-1" id="details-1">
-                  <p class="text-slate-400">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Accusantium beatae eveniet, pariatur dicta laboriosam nobis
-                    hic ipsa et dignissimos corrupti, omnis ex ad mollitia minus
-                    voluptatem quo impedit commodi molestiae. Ullam aliquam
-                    repellat, commodi eius magnam mollitia quos dolor expedita
-                    possimus consequatur quam quisquam? Corrupti atque autem
-                    omnis mollitia eos.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <a
-              href="#"
-              class="bg-indigo-500 rounded-md px-4 py-2 text-indigo-50 shadow-2xl shadow-indigo-200 dark:shadow-none text-center font-bold hover:shadow-none ring ring-offset-0 ring-indigo-500 focus:outline-none focus:ring-offset-2 transition-all"
-              >View Event</a
-            >
-          </div>
-        </article>
-
-        <article
-          class="bg-white dark:bg-slate-800 shadow-xl shadow-slate-200 dark:shadow-slate-800 rounded-lg"
-        >
-          <div
-            class="p-3 shadow bg-indigo-500 text-indigo-50 uppercase grid place-items-center rounded-t-lg"
-          >
-            <p class="text-sm">FEB</p>
-            <p class="text-3xl font-bold">3</p>
-          </div>
-          <div class="p-4 md:p-6 lg:p-8 grid gap-4 md:gap-6">
-            <div class="grid gap-1">
-              <p class="text-slate-400 text-sm">Feb 13-Feb 16</p>
-              <h2 class="font-bold text-2xl">
-                <a href="#">Adopt More Cats</a>
-              </h2>
-              <div class="grid gap-1">
-                <button
-                  aria-expanded="false"
-                  aria-controls="details-1"
-                  id="btn-1"
-                  class="text-slate-400 flex gap-1 items-center cursor-pointer"
-                >
-                  <p class="pointer-events-none">See Details</p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="h-4 w-4 pointer-events-none transition-transform"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                    />
-                  </svg>
-                </button>
-                <div class="grid gap-1" aria-labelledby="btn-1" id="details-1">
-                  <p class="text-slate-400">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Accusantium beatae eveniet, pariatur dicta laboriosam nobis
-                    hic ipsa et dignissimos corrupti, omnis ex ad mollitia minus
-                    voluptatem quo impedit commodi molestiae. Ullam aliquam
-                    repellat, commodi eius magnam mollitia quos dolor expedita
-                    possimus consequatur quam quisquam? Corrupti atque autem
-                    omnis mollitia eos.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <a
-              href="#"
+              target="_blank"
+              href="${event.link}"
               class="bg-indigo-500 rounded-md px-4 py-2 text-indigo-50 shadow-2xl shadow-indigo-200 dark:shadow-none text-center font-bold hover:shadow-none ring ring-offset-0 ring-indigo-500 focus:outline-none focus:ring-offset-2 transition-all"
               >View Event</a
             >
