@@ -1,8 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,ts,js}"],
+  content: ["*.{html,ts,js}"],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        cards: "repeat(auto-fit, minmax(250px, 1fr))",
+      },
+      gridTemplateRows: {
+        "auto-french": "auto 1fr",
+      },
+    },
   },
   plugins: [],
 };
