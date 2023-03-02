@@ -1,4 +1,3 @@
-import fetch from "node-fetch";
 import "./style.css";
 
 const eventContainer = document.querySelector("#events-container");

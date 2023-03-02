@@ -1,4 +1,5 @@
 import { HandlerContext, HandlerEvent } from "@netlify/functions";
+import fetch from "node-fetch";
 
 const { GOOGLE_API_KEY, GOOGLE_CAL_ID } = process.env;
 
@@ -25,7 +26,7 @@ async function handler(event: HandlerEvent, context: HandlerContext) {
     if (event.httpMethod === "GET") {
       return fetch(finalURL)
         .then((response) => response.json())
-        .then((data) => ({
+        .then((data: any) => ({
           statusCode: 200,
           headers,
           body: JSON.stringify(data.items, null, 2),
