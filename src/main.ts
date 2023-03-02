@@ -1,3 +1,4 @@
+import fetch from "node-fetch";
 import "./style.css";
 
 const eventContainer = document.querySelector("#events-container");
@@ -64,7 +65,7 @@ async function loadEvents(maxEvents: number = 8) {
     const endpoint = await fetch(
       `./.netlify/functions/calendarFetcher?maxResults=${maxEvents}`
     );
-    const data = await endpoint.json();
+    const data = (await endpoint.json()) as any;
     const processedEvent = data.map((e: any) => deriveEvent(e));
 
     if (eventContainer) {
